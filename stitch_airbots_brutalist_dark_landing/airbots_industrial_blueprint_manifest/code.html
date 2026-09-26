@@ -1,0 +1,851 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>AIRBOTS // HARDWARE FOUNDRY &amp; PROVING GROUND</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      * {
+        border-radius: 0px !important;
+        box-shadow: none !important;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #0A0A0A;
+        color: #EDEDED;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 28s linear infinite;
+    }
+</style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "void": "#0A0A0A",
+            "paper": "#EDEDED",
+            "dim": "#737373",
+            "faint": "#383838",
+            "hairline": "rgba(255, 255, 255, 0.12)",
+            "hairline-strong": "rgba(255, 255, 255, 0.22)"
+          },
+          fontFamily: {
+            "sans": ["Space Grotesk", "Inter", "sans-serif"],
+            "mono": ["JetBrains Mono", "monospace"],
+            "body": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0A0A0A] text-[#EDEDED] font-body selection:bg-[#EDEDED] selection:text-[#0A0A0A] min-h-screen antialiased">
+<!-- ========================================================================= -->
+<!-- 1. STARK TOP NAVIGATION & COORDINATE APEX                                 -->
+<!-- ========================================================================= -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#0A0A0A]/95 backdrop-blur-none border-b border-hairline px-6 md:px-12 py-4 flex items-center justify-between">
+<!-- Top-Left coordinates -->
+<div class="flex items-center gap-4">
+<span class="text-zinc-600 font-mono text-xs select-none">+</span>
+<a class="font-mono text-[11px] tracking-[0.2em] text-[#EDEDED] uppercase hover:opacity-70 transition-opacity" href="#">
+      AIRBOTS // 17.5385° N, 78.3860° E
+    </a>
+<span class="hidden sm:inline font-mono text-[10px] tracking-[0.15em] text-[#525252] uppercase">
+      // VNRVJIET B-321
+    </span>
+</div>
+<!-- Top-Right chapters -->
+<nav class="flex items-center gap-6 font-mono text-[11px] uppercase tracking-[0.2em]">
+<a class="text-[#737373] hover:text-[#EDEDED] transition-colors" href="#fleet">[ CH.01 / MANIFEST ]</a>
+<a class="text-[#737373] hover:text-[#EDEDED] transition-colors" href="#arena">[ CH.02 / LEDGER ]</a>
+<a class="text-[#737373] hover:text-[#EDEDED] transition-colors" href="#turf">[ CH.03 / TURF ]</a>
+<a class="text-[#737373] hover:text-[#EDEDED] transition-colors" href="#cadre">[ CH.04 / CADRE ]</a>
+<span class="text-zinc-600 font-mono text-xs select-none">+</span>
+</nav>
+</header>
+<main class="w-full relative z-10 flex flex-col pt-14">
+<!-- ========================================================================= -->
+<!-- 2. RUNNING CONTINUOUS MONOSPACE TELEMETRY TICKER                          -->
+<!-- ========================================================================= -->
+<div class="w-full border-b border-hairline overflow-hidden bg-[#0A0A0A] py-2 flex items-center select-none">
+<div class="animate-marquee whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.25em] text-[#737373]">
+<span class="">AIRBOTS // VNRVJIET // DEPT. B-321 // 30+ PODIUMS // 5+ STATES // HARDWARE FOUNDRY // 17.5385° N, 78.3868° E // ACTIVE KINETICS //&nbsp;</span>
+<span class="">AIRBOTS // VNRVJIET // DEPT. B-321 // 30+ PODIUMS // 5+ STATES // HARDWARE FOUNDRY // 17.5385° N, 78.3868° E // ACTIVE KINETICS //&nbsp;</span>
+<span class="">AIRBOTS // VNRVJIET // DEPT. B-321 // 30+ PODIUMS // 5+ STATES // HARDWARE FOUNDRY // 17.5385° N, 78.3868° E // ACTIVE KINETICS //&nbsp;</span>
+<span class="">AIRBOTS // VNRVJIET // DEPT. B-321 // 30+ PODIUMS // 5+ STATES // HARDWARE FOUNDRY // 17.5385° N, 78.3868° E // ACTIVE KINETICS //&nbsp;</span>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- 3. HERO: RADICAL SCALE MONUMENTAL TYPOGRAPHY & APEX BLUEPRINT             -->
+<!-- ========================================================================= -->
+<section class="w-full border-b border-hairline px-6 md:px-12 pt-16 pb-16 relative">
+<!-- Blueprint Crosshairs -->
+<span class="absolute top-0 left-0 text-zinc-600 font-mono text-xs p-2 select-none">+</span>
+<span class="absolute top-0 right-0 text-zinc-600 font-mono text-xs p-2 select-none">+</span>
+<span class="absolute bottom-0 left-0 text-zinc-600 font-mono text-xs p-2 select-none">+</span>
+<span class="absolute bottom-0 right-0 text-zinc-600 font-mono text-xs p-2 select-none">+</span>
+<!-- Upper Stark Metatags -->
+<div class="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-12 border-b border-hairline">
+<div class="font-mono text-[11px] tracking-[0.2em] text-[#737373] uppercase flex items-center gap-3">
+<span class="text-zinc-500 font-mono">+</span>
+<span class="">ARCH // HARDWARE FOUNDRY</span>
+<span class="text-[#383838]">/</span>
+<span class="">SYS.REF // B-321, B-BLOCK, VNRVJIET</span>
+</div>
+<div class="font-mono text-[11px] tracking-[0.2em] text-[#737373] uppercase flex items-center gap-6">
+<span class="">STATUS // LIVE COMBAT LAB</span>
+<span class="text-[#383838]">/</span>
+<span class="">DISP // OPERATIONAL</span>
+<span class="text-zinc-500 font-mono">+</span>
+</div>
+</div>
+<!-- Monumental Typography -->
+<div class="py-12 md:py-20 select-none">
+<h1 class="font-sans font-bold text-[15.5vw] leading-[0.82] tracking-[-0.04em] uppercase text-[#EDEDED] m-0 p-0">
+        WE BUILD.<br>
+        WE COMPETE.<br>
+        WE DOMINATE.
+      </h1>
+</div>
+<!-- Hero Baseline Technical Breakdown -->
+<div class="w-full grid grid-cols-1 md:grid-cols-12 gap-8 pt-8 border-t border-hairline items-start">
+<div class="md:col-span-6 font-body text-sm md:text-base leading-relaxed text-[#737373] font-light">Competitive robotics research &amp; combat engineering division. Department of Electronics &amp; Instrumentation Engineering (EIE), VNRVJIET. Uncompromising hardware architecture, deterministic motion control, and high-energy impact kinetics.</div>
+<div class="md:col-span-3 font-mono text-[11px] tracking-[0.18em] text-[#737373] uppercase flex flex-col gap-1 border-l border-hairline md:pl-6">
+<span class="text-[#EDEDED]">01. OPERATIONAL DOMAIN</span>
+<span class="">PRECISION LFR &amp; MAZE SOLVERS</span>
+<span class="">AUTONOMOUS UAV / AEROSPACE</span>
+<span class="">ALL-TERRAIN HIGH-SPEED RACERS</span>
+<span class="">HARDOX HEAVYWEIGHT COMBAT</span>
+</div>
+<div class="md:col-span-3 font-mono text-[11px] tracking-[0.18em] text-[#737373] uppercase flex flex-col gap-1 border-l border-hairline md:pl-6">
+<span class="text-[#EDEDED]">WIN RATIO // 82.4%</span>
+<span class="">PODIUMS // 30+ NATIONAL</span>
+<span class="">DEPLOYMENTS // 5+ STATES</span>
+<span class="">CYCLE // 2023 — 2025</span>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 4. THE FLEET AS A TECHNICAL MANIFEST (FULL BLEED ROWS, ZERO CARDS)        -->
+<!-- ========================================================================= -->
+<section class="w-full border-b border-hairline relative" id="fleet">
+<!-- Chapter Header Row -->
+<div class="w-full px-6 md:px-12 py-8 border-b border-hairline flex flex-col md:flex-row md:items-baseline justify-between gap-4 relative">
+<span class="absolute top-0 left-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<span class="absolute top-0 right-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<div class="flex items-baseline gap-4">
+<span class="font-mono text-xs text-[#737373] tracking-[0.2em]">[ CH. 01 ]</span>
+<h2 class="font-sans text-2xl md:text-4xl font-bold uppercase tracking-tight text-[#EDEDED]">
+          TECHNICAL MANIFEST // FLEET ARSENAL
+        </h2>
+</div>
+<span class="font-mono text-[11px] text-[#737373] uppercase tracking-[0.2em]">
+        SPECIFICATION REGISTER // REVISION 2025.2
+      </span>
+</div>
+<!-- MANIFEST ROW 1: AERIAL UAV & FIXED-WING -->
+<div class="w-full border-b border-hairline grid grid-cols-1 lg:grid-cols-12 relative">
+<span class="absolute top-0 left-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<!-- Left Image Column with Technical Readout Overlay -->
+<div class="lg:col-span-6 border-b lg:border-b-0 lg:border-r border-hairline relative p-6 md:p-10 flex flex-col justify-between">
+<div class="w-full aspect-[16/10] bg-[#0A0A0A] relative overflow-hidden border border-hairline">
+<img alt="AIRBOTS Autonomous Drone and Fixed-Wing RC Aircraft" class="w-full h-full object-cover filter grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/AEtjO1VcqzKN29-N7LxV-3R9rnljrF80qZW5XLRRLeAwODT7yEvu3n3Wv8NG1BLj6tXJq2UA_rNFg3MmwvvjNa9KLMdSs7U_Sof5mfWfWNnlzkKmZ7-1gwU0Vv66li-abGq1ZfRouvIqsU8cY8Znbf9gd_kebuofhCRX0Te5WXZlHbbu1NYp-DiT2u61VF92smLns05-opcOPCcXMaSZYBAsl6n6hL8V32BPW6K76Wj5KtbEpK3RdhZ5e6qJG7_K">
+<div class="absolute top-3 left-3 font-mono text-[10px] tracking-[0.2em] bg-[#0A0A0A] px-2 py-1 border border-hairline text-[#EDEDED] uppercase">
+            FIG 01.01 // AEROSPACE CADRE
+          </div>
+<div class="absolute bottom-3 right-3 font-mono text-[10px] tracking-[0.15em] bg-[#0A0A0A] px-2 py-1 border border-hairline text-[#737373] uppercase">
+            LAT 17.5385° N / TELEM_OK
+          </div>
+</div>
+<div class="pt-4 font-mono text-[10px] tracking-[0.2em] text-[#737373] uppercase flex justify-between">
+<span class="">OPTICAL PAYLOAD GIMBAL</span>
+<span class="">WAYPOINT RECON // FIELD TESTED</span>
+</div>
+</div>
+<!-- Right Specification Data Sheet -->
+<div class="lg:col-span-6 p-6 md:p-10 flex flex-col justify-between">
+<div>
+<div class="font-mono text-[11px] tracking-[0.2em] text-[#737373] uppercase mb-2">
+            REG // 01.01 — AEROSPACE DIVISION
+          </div>
+<h3 class="font-sans text-2xl md:text-3xl font-bold uppercase tracking-tight text-[#EDEDED] mb-4">
+            AERIAL // RESCUE UAV &amp; FIXED-WING TRAINER
+          </h3>
+<p class="font-body text-xs md:text-sm text-[#737373] font-light leading-relaxed mb-8">Dual flight envelope architecture for aerial rescue scenarios and aerodynamic efficiency validation. Aerodynamic testing platform for custom airfoil efficiency and flight dynamics.</p>
+</div>
+<!-- 2-Column Monospace 11px Datasheet -->
+<div class="border-t border-hairline pt-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 font-mono text-[11px] uppercase tracking-[0.15em]">
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">MCU</span>
+<span class="text-[#EDEDED]">DUAL TELEMETRY AUTOPILOT</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">AIRFRAME</span>
+<span class="text-[#EDEDED]">CARBON COMPOSITE MONOCOQUE</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">PROPULSION</span>
+<span class="text-[#EDEDED]">RC BRUSHLESS OUTRUNNER</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">STATUS</span>
+<span class="text-[#EDEDED]">DEPLOYED / FIELD TESTED</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MANIFEST ROW 2: LFR // HIGH-SPEED TRACKER -->
+<div class="w-full border-b border-hairline grid grid-cols-1 lg:grid-cols-12 relative">
+<span class="absolute top-0 left-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<!-- Left: Giant Designation -->
+<div class="lg:col-span-5 p-6 md:p-10 border-b lg:border-b-0 lg:border-r border-hairline flex flex-col justify-between">
+<div class="font-mono text-[11px] tracking-[0.2em] text-[#737373] uppercase mb-2">
+          REG // 01.02 — OPTICAL KINETICS
+        </div>
+<div>
+<h3 class="font-sans text-2xl md:text-4xl font-bold uppercase tracking-tight text-[#EDEDED] leading-none mb-3">
+            LFR // HIGH-SPEED TRACKER
+          </h3>
+<p class="font-body text-xs text-[#737373] font-light leading-relaxed">
+            Active track platform engineered for extreme line-tracking fidelity and sub-second track solver execution.
+          </p>
+</div>
+<div class="font-mono text-[10px] text-[#525252] tracking-[0.2em] uppercase pt-4">
+          SUBSYSTEM // LFS 16A OPTICAL STACK
+        </div>
+</div>
+<!-- Right: Compact 2-Column Datasheet -->
+<div class="lg:col-span-7 p-6 md:p-10 flex flex-col justify-center">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 font-mono text-[11px] uppercase tracking-[0.15em]">
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">MCU</span>
+<span class="text-[#EDEDED]">ATMEGA328P / ARDUINO NANO</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">SENSOR</span>
+<span class="text-[#EDEDED]">LFS 16A MULTIPLEXED ARRAY</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">ACTUATION</span>
+<span class="text-[#EDEDED]">N20 12V 600RPM MICRO GEAR</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">WHEELS</span>
+<span class="text-[#EDEDED]">43MM HIGH-TRACTION RUBBER</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">POWER</span>
+<span class="text-[#EDEDED]">11.1V GNB LIPO (LM2596 BUCK)</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">STATUS</span>
+<span class="text-[#EDEDED]">ACTIVE ARSENAL</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MANIFEST ROW 3: ATR // ALL-TERRAIN RACER & CIRCUIT SPRINT -->
+<div class="w-full border-b border-hairline grid grid-cols-1 lg:grid-cols-12 relative">
+<span class="absolute top-0 left-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<!-- Left: Giant Designation -->
+<div class="lg:col-span-5 p-6 md:p-10 border-b lg:border-b-0 lg:border-r border-hairline flex flex-col justify-between">
+<div class="font-mono text-[11px] tracking-[0.2em] text-[#737373] uppercase mb-2">
+          REG // 01.03 — HIGH-TORQUE TRACTION
+        </div>
+<div>
+<h3 class="font-sans text-2xl md:text-4xl font-bold uppercase tracking-tight text-[#EDEDED] leading-none mb-3">
+            ATR // ALL-TERRAIN RACER
+          </h3>
+<p class="font-body text-xs text-[#737373] font-light leading-relaxed">
+            High-clearance chassis engineered for aggressive obstacle negotiation, water basin crossings, and sprint switchbacks.
+          </p>
+</div>
+<div class="font-mono text-[10px] text-[#525252] tracking-[0.2em] uppercase pt-4">
+          SUBSYSTEM // DUAL HIGH-TORQUE MATRIX
+        </div>
+</div>
+<!-- Right: Compact Datasheet -->
+<div class="lg:col-span-7 p-6 md:p-10 flex flex-col justify-center">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 font-mono text-[11px] uppercase tracking-[0.15em]">
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">CHASSIS</span>
+<span class="text-[#EDEDED]">REINFORCED PERIMETER BUMPER</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">SUSPENSION</span>
+<span class="text-[#EDEDED]">HIGH-CLEARANCE CUSTOM ATR</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">DRIVETRAIN</span>
+<span class="text-[#EDEDED]">DUAL HIGH-TORQUE MOTOR MATRIX</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">STATUS</span>
+<span class="text-[#EDEDED]">VERIFIED RACER</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MANIFEST ROW 4: MAZE SOLVER // AUTONOMOUS DEAD-RECKONING -->
+<div class="w-full border-b border-hairline grid grid-cols-1 lg:grid-cols-12 relative">
+<span class="absolute top-0 left-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<!-- Left: Giant Designation -->
+<div class="lg:col-span-5 p-6 md:p-10 border-b lg:border-b-0 lg:border-r border-hairline flex flex-col justify-between">
+<div class="font-mono text-[11px] tracking-[0.2em] text-[#737373] uppercase mb-2">
+          REG // 01.04 — LABYRINTH RESOLUTION
+        </div>
+<div>
+<h3 class="font-sans text-2xl md:text-4xl font-bold uppercase tracking-tight text-[#EDEDED] leading-none mb-3">
+            AUTONOMOUS MAZE SOLVER
+          </h3>
+<p class="font-body text-xs text-[#737373] font-light leading-relaxed">
+            Real-time enclosed labyrinth environment mapping, dead-reckoning odometer integration, and deterministic decision trees.
+          </p>
+</div>
+<div class="font-mono text-[10px] text-[#525252] tracking-[0.2em] uppercase pt-4">
+          SUBSYSTEM // ONBOARD PATH SEARCH &amp; SOLVE
+        </div>
+</div>
+<!-- Right: Compact Datasheet -->
+<div class="lg:col-span-7 p-6 md:p-10 flex flex-col justify-center">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 font-mono text-[11px] uppercase tracking-[0.15em]">
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">MAPPING</span>
+<span class="text-[#EDEDED]">REAL-TIME DECISION-TREE</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">SENSORS</span>
+<span class="text-[#EDEDED]">ULTRASONIC &amp; INFRARED ARRAY</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">ODOMETRY</span>
+<span class="text-[#EDEDED]">REAL-TIME DEAD-RECKONING</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">STATUS</span>
+<span class="text-[#EDEDED]">DEPLOYED PLATFORM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MANIFEST ROW 5: IIT-B // E-YANTRA ROBOTICS TESTBED -->
+<div class="w-full border-b border-hairline grid grid-cols-1 lg:grid-cols-12 relative">
+<span class="absolute top-0 left-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<!-- Left: Giant Designation -->
+<div class="lg:col-span-5 p-6 md:p-10 border-b lg:border-b-0 lg:border-r border-hairline flex flex-col justify-between">
+<div class="font-mono text-[11px] tracking-[0.2em] text-[#737373] uppercase mb-2">
+          REG // 01.05 — RESEARCH TESTBED
+        </div>
+<div>
+<h3 class="font-sans text-2xl md:text-4xl font-bold uppercase tracking-tight text-[#EDEDED] leading-none mb-3">
+            IIT-B E-YANTRA TESTBED
+          </h3>
+<p class="font-body text-xs text-[#737373] font-light leading-relaxed">
+            National robotics testbed sponsored by IIT Bombay. Dedicated hardware-in-the-loop verification and kinematic telemetry.
+          </p>
+</div>
+<div class="font-mono text-[10px] text-[#525252] tracking-[0.2em] uppercase pt-4">
+          AFFILIATION // IIT BOMBAY E-YANTRA
+        </div>
+</div>
+<!-- Right: Compact Datasheet -->
+<div class="lg:col-span-7 p-6 md:p-10 flex flex-col justify-center">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 font-mono text-[11px] uppercase tracking-[0.15em]">
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">HARDWARE</span>
+<span class="text-[#EDEDED]">IN-THE-LOOP EMBEDDED SYSTEM</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">LAB</span>
+<span class="text-[#EDEDED]">B-321 FOUNDRY WING</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">PROTOCOL</span>
+<span class="text-[#EDEDED]">HIL VERIFICATION STACK</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">STATUS</span>
+<span class="text-[#EDEDED]">ACTIVE RESEARCH</span>
+</div>
+</div>
+</div>
+</div>
+<!-- MANIFEST ROW 6: ROBO WAR // COMBAT PROTOTYPE (IMAGE 9 INTEGRATION) -->
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 relative">
+<span class="absolute top-0 left-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<!-- Left: Giant Designation & Warning Banner -->
+<div class="lg:col-span-5 p-6 md:p-10 border-b lg:border-b-0 lg:border-r border-hairline flex flex-col justify-between">
+<div>
+<div class="font-mono text-[11px] tracking-[0.2em] text-[#737373] uppercase mb-2">
+            REG // 01.06 — KINETIC IMPACT PROTOTYPE
+          </div>
+<h3 class="font-sans text-2xl md:text-4xl font-bold uppercase tracking-tight text-[#EDEDED] leading-none mb-4">
+            ROBO WAR // COMBAT PROTOTYPE
+          </h3>
+<!-- Bracketed Industrial Warning -->
+<div class="font-mono text-[11px] tracking-[0.2em] text-[#EDEDED] uppercase border border-hairline p-3 mb-6 bg-[#0A0A0A]">
+            [ STATUS: R&amp;D EARLY FABRICATION // NOT DEPLOYED ]
+          </div>
+<p class="font-body text-xs text-[#737373] font-light leading-relaxed mb-6">
+            Heavyweight kinetic combat platform undergoing structural welding and bench testing. Engineered for devastating energy transfer in full-contact arena conditions.
+          </p>
+</div>
+<!-- Compact Datasheet -->
+<div class="border-t border-hairline pt-6">
+<div class="flex flex-col gap-3 font-mono text-[11px] uppercase tracking-[0.15em]">
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">BALLISTIC CHASSIS</span>
+<span class="text-[#EDEDED]">HARDOX 500 / AR600 BULKHEADS</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">WEAPON</span>
+<span class="text-[#EDEDED]">HIGH-RPM TUNGSTEN DRUM MODULE</span>
+</div>
+<div class="flex justify-between border-b border-hairline pb-2">
+<span class="text-[#737373]">WEIGHT CLASS</span>
+<span class="text-[#EDEDED]">HEAVYWEIGHT COMBAT</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Full Image Integration -->
+<div class="lg:col-span-7 p-6 md:p-10 flex flex-col justify-between">
+<div class="w-full aspect-[16/10] bg-[#0A0A0A] relative overflow-hidden border border-hairline">
+<img alt="AIRBOTS Combat Prototype Robo War" class="w-full h-full object-cover filter grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/AEtjO1XeGEspr3M659ePDp1p6T8J3rrt8kSfP0UyZqkc91ofqgAHrbFGFtjrBFTOV85nkdGS1de1CIxTPTN8zAQVDyIIOde7-26FtovleR0vM1TIxHH6gH1BUTHEmIOZPwpjk9MybKiFlQpF4m55mJASTyGpfo0weEsgY1wJB9qevPIyUsD6Jrx66pvUlR4-rWSoxTIu8g7UT1OMG-KMez36JZf5yNEhU1rxAnGxqLDFZRfwvwU2TqXe-g6a7czw">
+<div class="absolute bottom-3 left-3 font-mono text-[10px] tracking-[0.2em] bg-[#0A0A0A] px-2 py-1 border border-hairline text-[#EDEDED] uppercase">
+            FIG 01.06 // HARDOX MONOCOQUE BENCH RIG
+          </div>
+<div class="absolute top-3 right-3 font-mono text-[10px] tracking-[0.15em] bg-[#0A0A0A] px-2 py-1 border border-hairline text-[#737373] uppercase">
+            MASS: AR600 REINFORCED
+          </div>
+</div>
+<div class="pt-4 font-mono text-[10px] tracking-[0.2em] text-[#737373] uppercase flex justify-between">
+<span class="">HIGH-ENERGY ROTATING MASS</span>
+<span class="">CHASSIS FABRICATION // IN PROGRESS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 5. THE ARENA: EDITORIAL LEDGER / DATA TABLE (NO TROPHY TILES)             -->
+<!-- ========================================================================= -->
+<section class="w-full border-b border-hairline relative" id="arena">
+<!-- Chapter Header -->
+<div class="w-full px-6 md:px-12 py-8 border-b border-hairline flex flex-col md:flex-row md:items-baseline justify-between gap-4 relative">
+<span class="absolute top-0 left-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<span class="absolute top-0 right-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<div class="flex items-baseline gap-4">
+<span class="font-mono text-xs text-[#737373] tracking-[0.2em]">[ CH. 02 ]</span>
+<h2 class="font-sans text-2xl md:text-4xl font-bold uppercase tracking-tight text-[#EDEDED]">
+          THE ARENA // COMPETITIVE LEDGER
+        </h2>
+</div>
+<span class="font-mono text-[11px] text-[#737373] uppercase tracking-[0.2em]">
+        VERIFIED PODIUM REGISTER // WIN RATIO: 82.4%
+      </span>
+</div>
+<!-- Editorial Ledger Table -->
+<div class="w-full">
+<!-- Column Labels -->
+<div class="hidden md:grid grid-cols-12 px-6 md:px-12 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-[#525252] border-b border-hairline">
+<div class="col-span-2">[ CODE / CYCLE ]</div>
+<div class="col-span-5">[ COMPETITION ]</div>
+<div class="col-span-2">[ INSTITUTION / VENUE ]</div>
+<div class="col-span-3 text-right">[ RESULT / PODIUM ]</div>
+</div>
+<!-- REC_01 -->
+<div class="grid grid-cols-1 md:grid-cols-12 px-6 md:px-12 py-6 border-b border-hairline items-baseline gap-2 md:gap-0 relative">
+<span class="absolute left-1 top-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div class="col-span-2 font-mono text-[11px] tracking-[0.15em] text-[#737373]">
+          REC_01 // 2024
+        </div>
+<div class="col-span-5 flex flex-col">
+<span class="font-sans text-base md:text-lg font-bold uppercase tracking-tight text-[#EDEDED]">Yukthi National Hackathon</span>
+<span class="font-body text-xs text-[#737373]">Hardware Autonomous Systems</span>
+</div>
+<div class="col-span-2 font-mono text-xs text-[#737373] uppercase">
+          BVRIT Hyderabad
+        </div>
+<div class="col-span-3 font-mono text-xs md:text-right text-[#EDEDED] uppercase tracking-[0.15em]">
+          01 // 1ST PLACE CHAMPION
+        </div>
+</div>
+<!-- REC_02 -->
+<div class="grid grid-cols-1 md:grid-cols-12 px-6 md:px-12 py-6 border-b border-hairline items-baseline gap-2 md:gap-0 relative">
+<span class="absolute left-1 top-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div class="col-span-2 font-mono text-[11px] tracking-[0.15em] text-[#737373]">
+          REC_02 // 2024
+        </div>
+<div class="col-span-5 flex flex-col">
+<span class="font-sans text-base md:text-lg font-bold uppercase tracking-tight text-[#EDEDED]">Robotec LFR Competition</span>
+<span class="font-body text-xs text-[#737373]">High-Frequency Track Solvers</span>
+</div>
+<div class="col-span-2 font-mono text-xs text-[#737373] uppercase">
+          MLRIT Hyderabad
+        </div>
+<div class="col-span-3 font-mono text-xs md:text-right text-[#EDEDED] uppercase tracking-[0.15em]">
+          01 // 1ST PLACE (FASTEST LAP)
+        </div>
+</div>
+<!-- REC_03 -->
+<div class="grid grid-cols-1 md:grid-cols-12 px-6 md:px-12 py-6 border-b border-hairline items-baseline gap-2 md:gap-0 relative">
+<span class="absolute left-1 top-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div class="col-span-2 font-mono text-[11px] tracking-[0.15em] text-[#737373]">
+          REC_03 // 2024
+        </div>
+<div class="col-span-5 flex flex-col">
+<span class="font-sans text-base md:text-lg font-bold uppercase tracking-tight text-[#EDEDED]">EMERGE National Hackathon</span>
+<span class="font-body text-xs text-[#737373]">Hardware R&amp;D Division</span>
+</div>
+<div class="col-span-2 font-mono text-xs text-[#737373] uppercase">
+          VNRVJIET Campus
+        </div>
+<div class="col-span-3 font-mono text-xs md:text-right text-[#EDEDED] uppercase tracking-[0.15em]">
+          01 // 1ST PLACE CHAMPION
+        </div>
+</div>
+<!-- REC_04 -->
+<div class="grid grid-cols-1 md:grid-cols-12 px-6 md:px-12 py-6 border-b border-hairline items-baseline gap-2 md:gap-0 relative">
+<span class="absolute left-1 top-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div class="col-span-2 font-mono text-[11px] tracking-[0.15em] text-[#737373]">
+          REC_04 // 2023-24
+        </div>
+<div class="col-span-5 flex flex-col">
+<span class="font-sans text-base md:text-lg font-bold uppercase tracking-tight text-[#EDEDED]">Elan &amp; nVision Sustainable Dev Track</span>
+<span class="font-body text-xs text-[#737373]">Sustainable Systems Engineering</span>
+</div>
+<div class="col-span-2 font-mono text-xs text-[#737373] uppercase">
+          IIT Hyderabad
+        </div>
+<div class="col-span-3 font-mono text-xs md:text-right text-[#EDEDED] uppercase tracking-[0.15em]">
+          01 // 1ST PLACE CHAMPION
+        </div>
+</div>
+<!-- REC_05 -->
+<div class="grid grid-cols-1 md:grid-cols-12 px-6 md:px-12 py-6 border-b border-hairline items-baseline gap-2 md:gap-0 relative">
+<span class="absolute left-1 top-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div class="col-span-2 font-mono text-[11px] tracking-[0.15em] text-[#737373]">
+          REC_05 // 2023-24
+        </div>
+<div class="col-span-5 flex flex-col">
+<span class="font-sans text-base md:text-lg font-bold uppercase tracking-tight text-[#EDEDED]">Infinitus LFR &amp; Robo Race</span>
+<span class="font-body text-xs text-[#737373]">Track Solver &amp; Obstacle Sprint</span>
+</div>
+<div class="col-span-2 font-mono text-xs text-[#737373] uppercase">
+          SRM AP
+        </div>
+<div class="col-span-3 font-mono text-xs md:text-right text-[#EDEDED] uppercase tracking-[0.15em]">
+          02 // 2ND PLACE RUNNER-UP
+        </div>
+</div>
+<!-- REC_06 -->
+<div class="grid grid-cols-1 md:grid-cols-12 px-6 md:px-12 py-6 border-b border-hairline items-baseline gap-2 md:gap-0 relative">
+<span class="absolute left-1 top-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div class="col-span-2 font-mono text-[11px] tracking-[0.15em] text-[#737373]">
+          REC_06 // 2023-24
+        </div>
+<div class="col-span-5 flex flex-col">
+<span class="font-sans text-base md:text-lg font-bold uppercase tracking-tight text-[#EDEDED]">Vasavi College Robotics Arena</span>
+<span class="font-body text-xs text-[#737373]">Tactical Arena Trial</span>
+</div>
+<div class="col-span-2 font-mono text-xs text-[#737373] uppercase">
+          Vasavi College of Engg
+        </div>
+<div class="col-span-3 font-mono text-xs md:text-right text-[#EDEDED] uppercase tracking-[0.15em]">
+          02 // 2ND PLACE RUNNER-UP
+        </div>
+</div>
+<!-- REC_07 -->
+<div class="grid grid-cols-1 md:grid-cols-12 px-6 md:px-12 py-6 border-b border-hairline items-baseline gap-2 md:gap-0 relative">
+<span class="absolute left-1 top-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div class="col-span-2 font-mono text-[11px] tracking-[0.15em] text-[#737373]">
+          REC_07 // 2024
+        </div>
+<div class="col-span-5 flex flex-col">
+<span class="font-sans text-base md:text-lg font-bold uppercase tracking-tight text-[#EDEDED]">Founder's Arena Pitching Fest</span>
+<span class="font-body text-xs text-[#737373]">Venture Prototyping Track</span>
+</div>
+<div class="col-span-2 font-mono text-xs text-[#737373] uppercase">
+          WeWork Innovation Forum
+        </div>
+<div class="col-span-3 font-mono text-xs md:text-right text-[#EDEDED] uppercase tracking-[0.15em]">
+          02 // 2ND PLACE RUNNER-UP
+        </div>
+</div>
+<!-- REC_08 -->
+<div class="grid grid-cols-1 md:grid-cols-12 px-6 md:px-12 py-6 border-b border-hairline items-baseline gap-2 md:gap-0 relative">
+<span class="absolute left-1 top-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div class="col-span-2 font-mono text-[11px] tracking-[0.15em] text-[#737373]">
+          REC_08 // NAT-CIRCUIT
+        </div>
+<div class="col-span-5 flex flex-col">
+<span class="font-sans text-base md:text-lg font-bold uppercase tracking-tight text-[#EDEDED]">TechnoXian, BITS Goa, NIT Surathkal &amp; IIT Guwahati</span>
+<span class="font-body text-xs text-[#737373]">SRM Chennai &amp; Kolkata // Quark &amp; TechXcelerate // Engi National Grand Prix</span>
+</div>
+<div class="col-span-2 font-mono text-xs text-[#737373] uppercase">
+          National Circuit
+        </div>
+<div class="col-span-3 font-mono text-xs md:text-right text-[#EDEDED] uppercase tracking-[0.15em]">
+          DEPLOYED // NATIONAL SQUAD
+        </div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 6. HOME TURF: FLAT 4-COLUMN HAIRLINE LEDGER (ZERO CARDS)                  -->
+<!-- ========================================================================= -->
+<section class="w-full border-b border-hairline relative" id="turf">
+<!-- Chapter Header -->
+<div class="w-full px-6 md:px-12 py-8 border-b border-hairline flex flex-col md:flex-row md:items-baseline justify-between gap-4 relative">
+<span class="absolute top-0 left-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<span class="absolute top-0 right-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<div class="flex items-baseline gap-4">
+<span class="font-mono text-xs text-[#737373] tracking-[0.2em]">[ CH. 03 ]</span>
+<h2 class="font-sans text-2xl md:text-4xl font-bold uppercase tracking-tight text-[#EDEDED]">
+          HOME TURF // CONVERGENCE ROBO ARENA
+        </h2>
+</div>
+<span class="font-mono text-[11px] text-[#737373] uppercase tracking-[0.2em]">
+        HOST PROVING GROUND // 4 DETERMINISTIC DISCIPLINES
+      </span>
+</div>
+<!-- Flat 4-Column Hairline Grid -->
+<div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+<!-- Col 01: Line Follower Robot -->
+<div class="p-6 md:p-10 border-b md:border-r border-hairline flex flex-col justify-between min-h-[300px] relative">
+<span class="absolute top-1 left-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div>
+<div class="font-mono text-[10px] tracking-[0.2em] text-[#737373] uppercase mb-4">
+            TRACK // 01 — OPTICAL
+          </div>
+<h3 class="font-sans text-xl font-bold uppercase tracking-tight text-[#EDEDED] mb-3">
+            LINE FOLLOWER ROBOT (LFR)
+          </h3>
+<p class="font-body text-xs leading-relaxed text-[#737373] font-light">
+            Calibrated optical tracking track with continuous tight curvature, crossover paths, and sharp 90-degree junctions evaluated at microsecond cycles.
+          </p>
+</div>
+<div class="font-mono text-[10px] tracking-[0.15em] text-[#525252] uppercase pt-6 border-t border-hairline">
+          SPEC // PRECISION MULTIPLEXED ARRAY
+        </div>
+</div>
+<!-- Col 02: 2v2 Robo Soccer -->
+<div class="p-6 md:p-10 border-b lg:border-r border-hairline flex flex-col justify-between min-h-[300px] relative">
+<span class="absolute top-1 left-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div>
+<div class="font-mono text-[10px] tracking-[0.2em] text-[#737373] uppercase mb-4">
+            TRACK // 02 — COMBAT ARENA
+          </div>
+<h3 class="font-sans text-xl font-bold uppercase tracking-tight text-[#EDEDED] mb-3">
+            2V2 ROBO SOCCER
+          </h3>
+<p class="font-body text-xs leading-relaxed text-[#737373] font-light">
+            Enclosed polycarbonate battle enclosure featuring high-torque mobile strikers colliding in fast-paced 3-minute tactical halves.
+          </p>
+</div>
+<div class="font-mono text-[10px] tracking-[0.15em] text-[#525252] uppercase pt-6 border-t border-hairline">
+          SPEC // REINFORCED CAGE DYNAMICS
+        </div>
+</div>
+<!-- Col 03: All-Terrain Race -->
+<div class="p-6 md:p-10 border-b md:border-r border-hairline flex flex-col justify-between min-h-[300px] relative">
+<span class="absolute top-1 left-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div>
+<div class="font-mono text-[10px] tracking-[0.2em] text-[#737373] uppercase mb-4">
+            TRACK // 03 — OBSTACLES
+          </div>
+<h3 class="font-sans text-xl font-bold uppercase tracking-tight text-[#EDEDED] mb-3">
+            ALL-TERRAIN RACE (ATR)
+          </h3>
+<p class="font-body text-xs leading-relaxed text-[#737373] font-light">
+            Grueling mechanical torture test over rock ballast, water basins, and 45-degree angled timber inclines challenging suspension geometries.
+          </p>
+</div>
+<div class="font-mono text-[10px] tracking-[0.15em] text-[#525252] uppercase pt-6 border-t border-hairline">
+          SPEC // HIGH-CLEARANCE CHASSIS TRIAL
+        </div>
+</div>
+<!-- Col 04: Circuit Race -->
+<div class="p-6 md:p-10 border-b border-hairline flex flex-col justify-between min-h-[300px] relative">
+<span class="absolute top-1 left-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div>
+<div class="font-mono text-[10px] tracking-[0.2em] text-[#737373] uppercase mb-4">
+            TRACK // 04 — SPRINT
+          </div>
+<h3 class="font-sans text-xl font-bold uppercase tracking-tight text-[#EDEDED] mb-3">
+            CIRCUIT RACE
+          </h3>
+<p class="font-body text-xs leading-relaxed text-[#737373] font-light">
+            Pure sprint trial across high-traction switchback pavement testing micro-controlled throttle curves, steering response, and top-end straight speed.
+          </p>
+</div>
+<div class="font-mono text-[10px] tracking-[0.15em] text-[#525252] uppercase pt-6 border-t border-hairline">
+          SPEC // HIGH-SPEED LAP RECORD MATRIX
+        </div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 7. ARCHITECTURAL CADRE & PHYSICAL WORKSHOP TERMINAL                       -->
+<!-- ========================================================================= -->
+<section class="w-full border-b border-hairline relative" id="cadre">
+<!-- Chapter Header -->
+<div class="w-full px-6 md:px-12 py-8 border-b border-hairline flex flex-col md:flex-row md:items-baseline justify-between gap-4 relative">
+<span class="absolute top-0 left-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<span class="absolute top-0 right-0 text-zinc-600 font-mono text-xs p-1 select-none">+</span>
+<div class="flex items-baseline gap-4">
+<span class="font-mono text-xs text-[#737373] tracking-[0.2em]">[ CH. 04 ]</span>
+<h2 class="font-sans text-2xl md:text-4xl font-bold uppercase tracking-tight text-[#EDEDED]">
+          THE FOUNDATION // C-CADRE
+        </h2>
+</div>
+<span class="font-mono text-[11px] text-[#737373] uppercase tracking-[0.2em]">
+        ORGANIZATIONAL ARCHITECTURE &amp; FACILITY
+      </span>
+</div>
+<!-- Leadership Split (Flat 3 Columns, No Cards) -->
+<div class="w-full grid grid-cols-1 md:grid-cols-3 border-b border-hairline">
+<!-- 01 Student Coordinator -->
+<div class="p-6 md:p-10 border-b md:border-b-0 md:border-r border-hairline flex flex-col justify-between min-h-[220px] relative">
+<span class="absolute top-1 left-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div>
+<div class="font-mono text-[10px] tracking-[0.2em] text-[#737373] uppercase mb-2">
+            LEADERSHIP // STUDENT COORDINATOR
+          </div>
+<h3 class="font-sans text-2xl font-bold uppercase tracking-tight text-[#EDEDED]">
+            Riteesh Dath
+          </h3>
+<p class="font-mono text-xs text-[#737373] uppercase mt-1">
+            Student Coordinator // AIRBOTS
+          </p>
+</div>
+<p class="font-body text-xs text-[#737373] font-light leading-relaxed pt-4 border-t border-hairline mt-4">
+          Directs competitive operations, track systems calibration, hardware architecture, and national campaign deployments across collegiate circuits.
+        </p>
+</div>
+<!-- 02 Founders -->
+<div class="p-6 md:p-10 border-b md:border-b-0 md:border-r border-hairline flex flex-col justify-between min-h-[220px] relative">
+<span class="absolute top-1 left-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div>
+<div class="font-mono text-[10px] tracking-[0.2em] text-[#737373] uppercase mb-2">
+            FOUNDING PILLARS
+          </div>
+<h3 class="font-sans text-2xl font-bold uppercase tracking-tight text-[#EDEDED]">
+            Sharath &amp; Karthikeya
+          </h3>
+<p class="font-mono text-xs text-[#737373] uppercase mt-1">
+            Founders // AIRBOTS
+          </p>
+</div>
+<p class="font-body text-xs text-[#737373] font-light leading-relaxed pt-4 border-t border-hairline mt-4">
+          Established the competitive robotics foundation at VNRVJIET; pioneered the first-generation high-speed Line Following chassis and proving grounds.
+        </p>
+</div>
+<!-- 03 Faculty Coordinator -->
+<div class="p-6 md:p-10 flex flex-col justify-between min-h-[220px] relative">
+<span class="absolute top-1 left-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<div>
+<div class="font-mono text-[10px] tracking-[0.2em] text-[#737373] uppercase mb-2">
+            FACULTY SPONSORSHIP
+          </div>
+<h3 class="font-sans text-2xl font-bold uppercase tracking-tight text-[#EDEDED]">
+            Dr. Senthil Kumar Selvaraj
+          </h3>
+<p class="font-mono text-xs text-[#737373] uppercase mt-1">Faculty Coordinator // Dept. of Electronics &amp; Instrumentation Engineering (EIE)</p>
+</div>
+<p class="font-body text-xs text-[#737373] font-light leading-relaxed pt-4 border-t border-hairline mt-4">Academic supervisor for academic guidance, instrumentation, sensor systems validation, embedded architecture, and institutional research facilitation.</p>
+</div>
+</div>
+<!-- Workshop HQ & Monospace Terminal Split -->
+<div class="w-full grid grid-cols-1 lg:grid-cols-12 relative">
+<span class="absolute top-1 left-1 text-zinc-600 font-mono text-xs select-none">+</span>
+<!-- Physical Location Details -->
+<div class="lg:col-span-6 p-6 md:p-10 border-b lg:border-b-0 lg:border-r border-hairline flex flex-col justify-between">
+<div>
+<div class="font-mono text-[11px] tracking-[0.2em] text-[#737373] uppercase mb-2">
+            PHYSICAL COORDINATES // WORKSHOP HQ
+          </div>
+<h3 class="font-sans text-3xl md:text-4xl font-bold uppercase tracking-tight text-[#EDEDED] mb-3">
+            Room B-321, B-Block
+          </h3>
+<p class="font-body text-xs md:text-sm text-[#737373] font-light leading-relaxed mb-6">
+            Vallurupalli Nageswara Rao Vignana Jyothi Institute of Engineering &amp; Technology, Vignana Jyothi Nagar, Pragathi Nagar, Nizampet, Hyderabad, Telangana 500090.
+          </p>
+<div class="grid grid-cols-2 gap-4 font-mono text-[11px] text-[#737373] uppercase tracking-[0.15em] border-t border-hairline pt-4">
+<div class="">LATITUDE // 17.5385° N</div>
+<div class="">LONGITUDE // 78.3860° E</div>
+<div class="">FACILITY // FOUNDRY B-321</div>
+<div class="">INSTITUTION // VNRVJIET</div>
+</div>
+</div>
+<div class="pt-8 flex items-center gap-6 font-mono text-xs uppercase tracking-[0.2em]">
+<a class="text-[#EDEDED] hover:opacity-70 transition-opacity flex items-center gap-2 border-b border-[#EDEDED] pb-1" href="https://instagram.com/airbots_vnrvjiet" rel="noopener noreferrer" target="_blank">
+<span class="">INSTAGRAM // @airbots_vnrvjiet</span>
+<span class="">↗</span>
+</a>
+</div>
+</div>
+<!-- Raw Industrial Telemetry Console (Zero rounded container, edge-to-edge) -->
+<div class="lg:col-span-6 p-6 md:p-10 flex flex-col justify-between bg-[#0A0A0A] font-mono text-[11px] leading-relaxed text-[#737373]">
+<div>
+<div class="flex items-center justify-between pb-4 mb-6 border-b border-hairline text-[#525252]">
+<span class="">TELEMETRY_TERMINAL // BUS_B321</span>
+<span class="">STATUS: SYNCHRONIZED</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class=""><span class="text-[#EDEDED]">&gt;</span> SYSTEM: AIRBOTS CENTRAL KERNEL INITIALIZED</div>
+<div class=""><span class="text-[#EDEDED]">&gt;</span> REGISTRY: LFR / ATR / UAV / RC TRAINER / MAZE SOLVER</div>
+<div class=""><span class="text-[#EDEDED]">&gt;</span> PROTOCOL: HARDOX AR500/AR600 EXPERIMENTAL STAGE</div>
+<div class=""><span class="text-[#EDEDED]">&gt;</span> PROVING GROUND: CONVERGENCE ROBO ARENA VNRVJIET</div>
+<div class=""><span class="text-[#EDEDED]">&gt;</span> WORKSHOP HQ: B-321, B-BLOCK READY FOR DISPATCH</div>
+<div class=""><span class="text-[#EDEDED]">&gt;</span> TOTAL FIELD PODIUMS: 30+ NATIONAL CIRCUITS</div>
+<div class="text-[#EDEDED] mt-3">&gt; SYS_READY // LISTENING ON 17.5385_78.3860 _</div>
+</div>
+</div>
+<div class="pt-8 border-t border-hairline flex justify-between text-[10px] text-[#525252] uppercase">
+<span class="">PORT // RAW_UART_57600</span>
+<span class="">CYCLE 2025 // OPERATIONAL</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ========================================================================= -->
+<!-- 8. STARK MINIMALIST EDITORIAL FOOTER                                      -->
+<!-- ========================================================================= -->
+<footer class="w-full px-6 md:px-12 py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 font-mono text-[11px] uppercase tracking-[0.2em] text-[#525252] bg-[#0A0A0A]">
+<div class="flex items-center gap-3">
+<span class="text-zinc-600 font-mono text-xs select-none">+</span>
+<span class="">© 2025 AIRBOTS VNRVJIET. REFINED HARDWARE SYSTEMS.</span>
+</div>
+<div class="flex items-center gap-8">
+<span class="">17.5385° N, 78.3860° E</span>
+<span class="">HYDERABAD, IND</span>
+<a class="text-[#737373] hover:text-[#EDEDED] transition-colors" href="#">BACK TO APEX ↑</a>
+<span class="text-zinc-600 font-mono text-xs select-none">+</span>
+</div>
+</footer>
+
+
+</body></html>

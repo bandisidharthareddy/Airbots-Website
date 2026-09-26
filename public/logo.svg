@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <path d="M12 32L24 8L36 32H29L24 21L19 32H12Z" fill="#F5F5F7"/>
+  <rect x="22" y="17" width="4" height="4" fill="#FFB800"/>
+  <path d="M38 12L44 8H50L44 12H38Z" fill="#F5F5F7" fill-opacity="0.6"/>
+  <text x="52" y="27" fill="#F5F5F7" font-family="'Space Grotesk', monospace, sans-serif" font-size="18" font-weight="800" letter-spacing="0.25em">AIRBOTS</text>
+  <circle cx="150" cy="22" r="3" fill="#FFB800"/>
+</svg>

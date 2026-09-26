@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600;700;800;900&family=Cinzel+Decorative:wght@700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===================================================================
+   THEME TOKENS (CSS Custom Properties)
+   =================================================================== */
+:root {
+  --bg: #0A0A0A;
+  --bg-secondary: #080808;
+  --text: #EDEDED;
+  --cursor-dot: #EDEDED;
+  --cursor-ring: rgba(255, 255, 255, 0.4);
+  --cursor-border: rgba(255, 255, 255, 0.2);
+  --text-muted: #8E8E93;
+  --text-dim: #525252;
+  --surface-card: #121212;
+  --surface-elevated: #1A1A1A;
+  --surface-overlay: rgba(12, 12, 12, 0.8);
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.22);
+  --noise-blend: screen;
+  --glass-bg: rgba(10, 10, 10, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --hover-bg: rgba(255, 255, 255, 0.02);
+}
+
+.light, html.light {
+  --bg: #F6F6F8;
+  --bg-secondary: #EBEBEF;
+  --text: #1A1A1A;
+  --cursor-dot: #1A1A1A;
+  --cursor-ring: rgba(0, 0, 0, 0.35);
+  --cursor-border: rgba(0, 0, 0, 0.15);
+  --text-muted: #555555;
+  --text-dim: #7A7A7A;
+  --surface-card: rgba(255, 255, 255, 0.85);
+  --surface-elevated: rgba(255, 255, 255, 0.95);
+  --surface-overlay: rgba(255, 255, 255, 0.92);
+  --border: rgba(0, 0, 0, 0.1);
+  --border-strong: rgba(0, 0, 0, 0.2);
+  --noise-blend: multiply;
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --hover-bg: rgba(0, 0, 0, 0.04);
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  body {
+    overscroll-behavior: none;
+    cursor: none;
+  }
+  /* Hide default cursor on fine pointer devices for custom cursor */
+  @media (pointer: fine) {
+    a, button, [role='button'], summary {
+      cursor: none;
+    }
+  }
+  /* Show default cursor on touch devices */
+  @media (pointer: coarse) {
+    body, a, button, [role='button'], summary {
+      cursor: auto;
+    }
+  }
+}
+
+/* Fractal Noise Texture */
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  mix-blend-mode: var(--noise-blend);
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar - Brutalist / Minimal */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFB800;
+}
+
+/* Selection highlight */
+::selection {
+  background-color: var(--text);
+  color: var(--bg);
+}
+
+/* Glassmorphism utility */
+/* ===================================================================
+   FLUID CYBERNETIC LIQUID GLASS & FERROFLUID SYSTEM
+   =================================================================== */
+/* Refractive Liquid Glass Base Panel */
+.glass {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background: linear-gradient(135deg, rgba(12, 12, 16, 0.6) 0%, rgba(26, 26, 34, 0.25) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.22),
+    0 16px 40px -10px rgba(0, 0, 0, 0.6);
+  border-radius: 28px;
+  transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.glass:hover {
+  border-color: rgba(255, 184, 0, 0.35);
+  box-shadow: 
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.35),
+    0 24px 50px -5px rgba(0, 0, 0, 0.75),
+    0 0 25px 0 rgba(255, 184, 0, 0.12);
+}
+
+/* Light Mode Glass Inversion: Frosted white tint & crisp charcoal text */
+.light .glass,
+html.light .glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(240, 240, 245, 0.45) 100%) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.9),
+    0 16px 36px -10px rgba(0, 0, 0, 0.08) !important;
+  color: #1A1A1A !important;
+}
+
+/* Deep Refractive Liquid Glass Container */
+.fluid-glass {
+  background: linear-gradient(135deg, rgba(10, 10, 14, 0.58) 0%, rgba(24, 24, 32, 0.22) 100%);
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.25),
+    0 20px 50px -10px rgba(0, 0, 0, 0.65),
+    0 0 30px 0 rgba(255, 184, 0, 0.05);
+  border-radius: 28px;
+  transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.fluid-glass:hover {
+  border-color: rgba(255, 184, 0, 0.4);
+  box-shadow: 
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.4),
+    0 25px 60px -5px rgba(0, 0, 0, 0.75),
+    0 0 35px 0 rgba(255, 184, 0, 0.2);
+}
+
+/* Light Mode Fluid Glass Inversion */
+.light .fluid-glass,
+html.light .fluid-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(240, 240, 248, 0.5) 100%) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.95),
+    0 16px 40px -10px rgba(0, 0, 0, 0.08),
+    0 0 30px 0 rgba(255, 184, 0, 0.06) !important;
+  color: #1A1A1A !important;
+}
+
+.light .fluid-glass:hover,
+html.light .fluid-glass:hover {
+  border-color: rgba(255, 184, 0, 0.6) !important;
+  box-shadow: 
+    inset 0 1px 2px 0 rgba(255, 255, 255, 1),
+    0 20px 48px -5px rgba(0, 0, 0, 0.12),
+    0 0 30px 0 rgba(255, 184, 0, 0.2) !important;
+}
+
+/* Liquid Glass Interactive Styling (Pill-shaped with Ferrofluid feel) */
+.liquid-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.06) 100%);
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #FFFFFF;
+  box-shadow: 
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.45),
+    0 10px 30px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 9999px;
+  transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.liquid-glass:hover {
+  transform: scale(1.04) translateY(-2px);
+  border-color: rgba(255, 184, 0, 0.8);
+  box-shadow: 
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.6),
+    0 16px 40px 0 rgba(255, 184, 0, 0.3),
+    0 0 25px 0 rgba(255, 184, 0, 0.2);
+}
+
+/* Light Mode Liquid Glass Inversion */
+.light .liquid-glass,
+html.light .liquid-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(240, 240, 245, 0.55) 100%) !important;
+  border-color: rgba(0, 0, 0, 0.16) !important;
+  color: #1A1A1A !important;
+  box-shadow: 
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.95),
+    0 8px 24px 0 rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Black Liquid Glass (Swooping Organic Curves) */
+.black-liquid-glass {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 32px;
+  padding: 36px;
+  box-shadow: 
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.2),
+    0 24px 60px 0 rgba(0, 0, 0, 0.75);
+  color: #FFFFFF;
+}
+
+/* Light Mode Black Liquid Glass Inversion to Frosted White */
+.light .black-liquid-glass,
+html.light .black-liquid-glass {
+  background: rgba(255, 255, 255, 0.65) !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.95),
+    0 20px 50px 0 rgba(0, 0, 0, 0.08) !important;
+  color: #1A1A1A !important;
+}
+
+/* Deep text contrast helpers for Light Mode */
+.light .black-liquid-glass h1,
+.light .black-liquid-glass h2,
+.light .black-liquid-glass h3,
+.light .black-liquid-glass p,
+.light .fluid-glass h1,
+.light .fluid-glass h2,
+.light .fluid-glass h3,
+.light .fluid-glass p,
+.light .glass h1,
+.light .glass h2,
+.light .glass h3,
+.light .glass p {
+  color: #1A1A1A;
+}
+
+.light .black-liquid-glass [class*="text-white"],
+.light .fluid-glass [class*="text-white"] {
+  color: #1A1A1A !important;
+}
+
+.light .black-liquid-glass [class*="text-[rgba(255,255,255"],
+.light .fluid-glass [class*="text-[rgba(255,255,255"] {
+  color: #555555 !important;
+}
+
+.light .black-liquid-glass .text-amber,
+.light .fluid-glass .text-amber,
+.light .glass .text-amber,
+.light .pulsing-gold-tag {
+  color: #D48800 !important;
+}
+
+/* Anti-Gravity Floating Keyframes & Class with Ferrofluid Drop-Shadow */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+    box-shadow: 
+      inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.35),
+      0 10px 30px 0 rgba(0, 0, 0, 0.4),
+      0 0 16px 0 rgba(255, 184, 0, 0.1);
+  }
+  50% {
+    transform: translateY(-5px);
+    box-shadow: 
+      inset 0 1px 2px 0 rgba(255, 255, 255, 0.5),
+      0 20px 48px 0 rgba(0, 0, 0, 0.55),
+      0 0 28px 0 rgba(255, 184, 0, 0.28);
+  }
+}
+
+.anti-gravity {
+  animation: float 3.5s ease-in-out infinite;
+  will-change: transform, box-shadow;
+}
+
+/* Molten Energy Flow Keyframe */
+@keyframes molten-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(255, 184, 0, 0.45));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(255, 184, 0, 0.85));
+  }
+}
+
+.molten-energy {
+  animation: molten-glow 3s ease-in-out infinite;
+}
+
+/* Subtle Pulsating Gold Text-Shadow for Category & Classification Tags */
+@keyframes gold-tag-pulse {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(255, 184, 0, 0.35);
+  }
+  50% {
+    text-shadow: 0 0 14px rgba(255, 184, 0, 0.85), 0 0 22px rgba(255, 184, 0, 0.45);
+  }
+}
+
+.pulsing-gold-tag {
+  color: #FFB800 !important;
+  animation: gold-tag-pulse 3s ease-in-out infinite;
+  will-change: text-shadow;
+}
+
+/* Theme transition for smooth color changes */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color 0.4s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* ===================================================================
+   1920-1930s RETRO-FUTURISTIC ART DECO & LITHOGRAPH UTILITIES
+   =================================================================== */
+.font-deco {
+  font-family: 'Bebas Neue', 'Space Grotesk', sans-serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+}
+
+.font-cinzel-deco {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+}
+
+.deco-forced-perspective {
+  text-shadow: 
+    0 2px 0 #9E7D3B,
+    0 4px 0 #7A5F28,
+    0 6px 0 #5C461B,
+    0 8px 0 #3D2D10,
+    0 12px 1px rgba(0, 0, 0, 0.6),
+    0 16px 20px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(212, 175, 55, 0.3);
+}
+
+.brass-gradient-text {
+  background: linear-gradient(180deg, #FFF6DD 0%, #F5D38A 25%, #D4AF37 50%, #A57E28 75%, #594212 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.copper-gradient-text {
+  background: linear-gradient(180deg, #E6F3F1 0%, #76B3AB 40%, #3B7A72 75%, #1B4540 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.halftone-litho {
+  background-image: 
+    radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 1.5px, transparent 1.5px),
+    radial-gradient(circle at center, rgba(62, 123, 115, 0.08) 1.5px, transparent 1.5px);
+  background-size: 10px 10px, 16px 16px;
+  background-position: 0 0, 5px 5px;
+}
+
+.vintage-vignette {
+  box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.85), inset 0 0 250px rgba(8, 9, 11, 0.95);
+}
+
+
