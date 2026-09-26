@@ -155,9 +155,9 @@ export default function Hero() {
           <span className="text-[var(--text)] font-semibold border-b border-hairline pb-1 text-amber">
             WIN RATIO // 82.4%
           </span>
-          <span>PODIUMS // 30+ NATIONAL</span>
-          <span>DEPLOYMENTS // 5+ STATES</span>
-          <span>CYCLE // 2023 — 2025</span>
+          <span>CAMPAIGNS // 27 REGISTERED</span>
+          <span>PODIUMS // NATIONAL WINNERS</span>
+          <span>CYCLE // 2023 — 2026</span>
           <span className="text-amber">FOUNDRY // B-321 READY</span>
         </div>
       </div>

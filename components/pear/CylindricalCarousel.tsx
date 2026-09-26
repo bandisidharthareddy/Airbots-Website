@@ -27,23 +27,23 @@ const FAQ_ITEMS: FAQItem[] = [
   {
     id: "faq-03",
     tag: "DISCLOSURE // 03",
-    question: "What disciplines are featured in Convergence Robo Arena?",
+    question: "What disciplines are featured in ROBO ARENA 2.0?",
     answer:
-      "Co-hosted annually with IEEE RAS at VNRVJIET, the proving grounds stage 4 major events: Line Follower Robot (LFR) speed sprint, 2v2 polycarbonate Robo Soccer, rock/ballast All-Terrain Race (ATR), and high-traction Circuit Race.",
+      "Held on September 18th & 19th, 2026, and co-organized by AIRBOTS and IEEE, ROBO ARENA 2.0 stages 4 action-packed tracks: Line Follower Robot (LFR), Multi-Terrain Racer (ATR), 2v2 Robo Soccer, and Circuit Racing.",
   },
   {
     id: "faq-04",
     tag: "DISCLOSURE // 04",
     question: "Who is eligible to join the AIRBOTS hardware cadre?",
     answer:
-      "Recruitment is open to all engineering departments at VNRVJIET (EIE, ECE, EEE, Mech, CSE). Prior robotics experience is welcomed but not required; apprentice cadres complete intensive hardware bootcamps across embedded firmware, CAD, and telemetry.",
+      "Recruitment is open to all engineering disciplines at VNRVJIET across our 6 core domains: Robotics, Research, Mechanical Design, Embedded Systems & Firmware, Documentation, and Media Cadre.",
   },
   {
     id: "faq-05",
     tag: "DISCLOSURE // 05",
-    question: "How are national campaigns and hardware testbeds funded?",
+    question: "How are national research testbeds and industry projects conducted?",
     answer:
-      "Backed by the Department of Electronics & Instrumentation Engineering (EIE) and IIT Bombay e-Yantra research initiatives, combined with accumulated national competition victory prize pools and institutional innovation sponsorships.",
+      "AIRBOTS collaborates on national projects like IIT Bombay e-Yantra, industrial 6-axis robotic arm fine-tuning with Xairo Tech, and conducts foundational robotics workshop series for budding engineers.",
   },
 ];
 

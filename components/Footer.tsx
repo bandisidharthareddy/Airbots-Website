@@ -78,7 +78,7 @@ export default function Footer() {
 
             <div className="font-mono text-[10px] tracking-[0.25em] text-amber uppercase mb-3 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-amber inline-block animate-pulse"></span>
-              FOUNDRY ETHOS // 2025-2026
+              FOUNDRY ETHOS // EST. 2023 // CADRE 2025–2026
             </div>
             <h2 className="font-serif italic font-normal text-2xl sm:text-3xl md:text-5xl leading-tight text-[var(--text)] max-w-2xl">
               Not an after-hours hobby club, a{" "}
