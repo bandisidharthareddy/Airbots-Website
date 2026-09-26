@@ -58,22 +58,22 @@ export default function Hero() {
       {/* Pear.no 4-Point Star Corner Emblems */}
       <div className="relative z-10">
         <span className="absolute top-0 left-0 text-amber w-3.5 h-3.5 m-2 opacity-60 select-none">
-          <svg viewBox="0 0 24 24" fill="currentColor">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" className="w-full h-full block">
             <path d="M12 0Q13.1 10.9 24 12Q13.1 13.1 12 24Q10.9 13.1 0 12Q10.9 10.9 12 0Z" />
           </svg>
         </span>
         <span className="absolute top-0 right-0 text-amber w-3.5 h-3.5 m-2 opacity-60 select-none">
-          <svg viewBox="0 0 24 24" fill="currentColor">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" className="w-full h-full block">
             <path d="M12 0Q13.1 10.9 24 12Q13.1 13.1 12 24Q10.9 13.1 0 12Q10.9 10.9 12 0Z" />
           </svg>
         </span>
         <span className="absolute bottom-0 left-0 text-amber w-3.5 h-3.5 m-2 opacity-60 select-none">
-          <svg viewBox="0 0 24 24" fill="currentColor">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" className="w-full h-full block">
             <path d="M12 0Q13.1 10.9 24 12Q13.1 13.1 12 24Q10.9 13.1 0 12Q10.9 10.9 12 0Z" />
           </svg>
         </span>
         <span className="absolute bottom-0 right-0 text-amber w-3.5 h-3.5 m-2 opacity-60 select-none">
-          <svg viewBox="0 0 24 24" fill="currentColor">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" className="w-full h-full block">
             <path d="M12 0Q13.1 10.9 24 12Q13.1 13.1 12 24Q10.9 13.1 0 12Q10.9 10.9 12 0Z" />
           </svg>
         </span>
