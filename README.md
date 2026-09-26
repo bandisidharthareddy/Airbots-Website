@@ -28,7 +28,7 @@ Built with modern **Fluid Cybernetics**, **Liquid Glassmorphism**, and industria
   - Hardox Heavyweight Combat Prototype
 - **'Data-Reveal' Liquid Glass Hover Interaction:** Quick-glance technical HUD overlay sliding up smoothly over hardware imagery revealing powertrain (`A2212 1400KV Motor`) and chassis envelope (`116 cm Wingspan`).
 - **3D Cylindrical Viewport Carousel (Technical Dossier):** A physical 360-degree CSS 3D ring rotating on the Y-axis. Features mouse-drag, touch-swipe, and wheel spin with smooth inertia damping (lerp physics), active center focus, and depth-of-field Gaussian blur.
-- **Competitive Ledger (The Arena):** Editorial record table cataloging 30+ national championships, hackathon victories, and podium placements.
+- **Competitive Ledger (The Arena):** Editorial record table cataloging 27 verified national hackathons, hardware robotics competitions, and collaborative research projects with interactive era and domain filtering.
 - **Retro-Futuristic Cadre Intake (`/cadre-intake`):** A dedicated 1920s–1930s Metropolis / Art Deco lithograph movie poster experience for new recruit intake.
 
 ---
