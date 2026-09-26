@@ -3,6 +3,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import { ThemeProvider } from "next-themes";
+import { Analytics } from "@vercel/analytics/next";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -48,6 +49,7 @@ export default function RootLayout({
           <CustomCursor />
           <SmoothScroll>{children}</SmoothScroll>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
